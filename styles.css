@@ -1,0 +1,518 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Azul muito suave */
+    color: #2a4d69; /* Azul escuro */
+    line-height: 1.6;
+}
+
+/* Menu flutuante */
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    right: 5px;
+    z-index: 1000;
+}
+
+.floating-menu .whatsapp img {
+    width: 50px;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.floating-menu .whatsapp img:hover {
+    transform: scale(1.2);
+}
+
+/* Cabeçalho */
+/* Estilização do header */
+/* Estilização do header */
+header {
+    text-align: center;
+    padding: 2rem 1rem; /* Reduzido o padding para deixar mais estreito */
+    background: linear-gradient(135deg, #e6f2ff, #99ccff); /* Gradiente suave */
+    border-bottom: 3px solid #1a3d5c; /* Linha fina no fundo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+}
+
+/* Título principal */
+header .main-heading {
+    font-size: 2.2rem; /* Reduzido o tamanho do título */
+    font-weight: 700;
+    color: #1a3d5c;
+    letter-spacing: 1px; /* Menos espaçamento entre as letras */
+    margin-bottom: 0.8rem; /* Menos margem abaixo do título */
+    animation: fadeIn 1.5s ease-out; /* Animação suave para entrada */
+}
+
+/* Subtítulo */
+header .sub-heading {
+    font-size: 1.1rem; /* Reduzido o tamanho do subtítulo */
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 1.5rem; /* Menos espaçamento abaixo do subtítulo */
+}
+
+/* Estilização do botão */
+.contact-btn {
+    padding: 0.6rem 1.8rem; /* Botão menor */
+    font-size: 1rem; /* Fonte do botão menor */
+    background-color: #1a3d5c; /* Azul escuro */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #15507f; /* Azul mais escuro ao passar o mouse */
+    transform: translateY(-3px); /* Levanta menos o botão */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Sessões */
+.section {
+    padding: 2rem 1rem;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1a3d5c;
+    margin-bottom: 1rem;
+}
+
+/* Sobre mim */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content img {
+    width: 250px;  /* Aumenta a largura da imagem */
+    height: 250px; /* Garantir que a altura também aumente proporcionalmente */
+    border-radius: 50%;
+    border: 3px solid #87cefa; /* Azul claro */
+    object-fit: cover;  /* Garante que a imagem mantenha uma boa proporção */
+    transition: transform 0.3s ease;  /* Transição suave para o efeito de zoom */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.about-content img:hover {
+    transform: scale(1.1);  /* Aumenta a imagem 10% ao passar o mouse */
+}
+
+/* Estilos da seção de serviços */
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+/* Estilo dos cards */
+.service-card {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 280px; /* Largura fixa para os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha os itens no topo, eliminando o espaço indesejado */
+    overflow: hidden;
+    margin: 0; /* Garantir que o card não tenha margem extra */
+    height: auto; /* Deixa a altura do card se ajustar automaticamente ao conteúdo */
+}
+
+/* Ajusta as imagens dentro dos cards */
+.service-card img {
+    width: 100%;
+    height: 180px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
+    object-position: top; /* Garante que o topo da imagem seja exibido */
+    border-radius: 8px;
+    margin-bottom: 8px; /* Espaço pequeno entre a imagem e o título */
+}
+
+
+/* Título */
+.service-card h3 {
+    margin: 0; /* Elimina qualquer margem do título */
+    color: #1a3d5c;
+    display: flex;
+    align-items: center; /* Alinha o título verticalmente */
+    justify-content: center; /* Garante que o título fique centralizado */
+    min-height: 50px; /* Garante uma altura mínima para o título */
+}
+
+/* Descrição */
+.service-card p {
+    color: #4f6980;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 0.9rem; /* Ajuste o tamanho da fonte para garantir que o texto caiba bem no card */
+    flex-grow: 0; /* Garante que a descrição não ocupe espaço extra */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background-color: #e6f7ff;
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Tela escurecida */
+    z-index: 1000; /* Garante que o modal fique acima de outros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative; /* Para posicionar o X dentro do modal */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #1a3d5c;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.close-btn:hover {
+    color: #ff6f61; /* Cor de hover para o X */
+}
+
+.modal h3 {
+    color: #1a3d5c;
+    margin-bottom: 1rem;
+}
+
+.modal p {
+    color: #4f6980;
+}
+
+/* Depoimentos */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Transição suave ao expandir */
+    overflow: hidden; /* Evita problemas de conteúdo cortado */
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita a exibição a 4 linhas */
+    -webkit-box-orient: vertical;
+}
+
+.testimonial.expanded .testimonial-text {
+    overflow: visible; /* Permite o texto expandir */
+    text-overflow: unset;
+    display: block; /* Remove a limitação de linhas */
+}
+
+.testimonial-author {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    text-align: right;
+}
+
+.read-more {
+    margin-top: 5px; /* Reduz o espaço acima */
+    margin-bottom: 0; /* Remove o espaço abaixo */
+    color: #004080; /* Cor do texto */
+    cursor: pointer;
+    font-size: 0.8rem; /* Fonte menor */
+    text-decoration: underline; /* Estilo de link sublinhado */
+    border: none; /* Remove bordas */
+    background: none; /* Remove fundo */
+    display: inline-block; /* Garante que seja tratado como texto */
+    text-align: right; /* Alinha o texto à direita */
+    float: right; /* Posiciona o botão no canto direito */
+}
+
+.read-more:hover {
+    color: #003060; /* Cor mais escura no hover */
+}
+
+.produtos-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9; /* Fundo claro para destacar a seção */
+    text-align: center;
+}
+
+.produto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.produto-descricao {
+    flex: 1 1 60%; /* O texto ocupa mais espaço */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2a4d69;
+}
+
+.produto-descricao p {
+    margin-bottom: 1.5rem;
+}
+
+.produto-imagem {
+    flex: 1 1 35%; /* A imagem ocupa menos espaço */
+    text-align: center;
+}
+
+.produto-imagem img {
+    width: 60%; /* Definindo a largura da imagem como 60% */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comprar-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #004080; /* Azul escuro */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.comprar-btn:hover {
+    background-color: #003060; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* Media query para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    .produto {
+        flex-direction: column; /* Coloca os itens um embaixo do outro */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .produto-imagem {
+        flex: 1 1 100%; /* A imagem ocupa toda a largura */
+        margin-bottom: 1rem; /* Espaço entre a imagem e a descrição */
+    }
+
+    .produto-descricao {
+        flex: 1 1 100%; /* A descrição ocupa toda a largura */
+        text-align: center; /* Centraliza a descrição */
+    }
+
+    .comprar-btn {
+        display: block; /* Torna o botão um bloco */
+        margin: 0 auto; /* Centraliza o botão */
+        width: auto; /* O botão vai manter o tamanho natural */
+    }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #004080; /* Azul suave */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    background-color: #004080; /* Azul suave */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    background-color: #003060; /* Azul mais escuro */
+}
+
+/* Contato */
+.social-links {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-bottom: 30px; /* Espaçamento abaixo dos botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004080; /* Cor azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #003060; /* Azul mais escuro */
+    transform: scale(1.1);
+}
+
+.form-container {
+    padding: 20px 0; /* Espaçamento acima e abaixo do formulário */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #e6f2ff;
+    margin-top: 2rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+/* Adicionando um fade-in para elementos */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-btn {
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.contact-btn:hover {
+    background-color: #128c7e; /* Cor um pouco mais escura para o efeito hover */
+    transform: scale(1.05);
+}
